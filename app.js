@@ -47,7 +47,7 @@ function gerarNumeroAleatorio() {
     if (quantidadeDeElementosNaLista == 3) {
         listaDeNumerosSorteados = [];
     }
-    if (listaDeNumerosSorteados.includes(numeroEscolhido)) {
+    if (listaDeNumerosSoadicionarteados.includes(numeroEscolhido)) {
         return gerarNumeroAleatorio();
     } else {
         listaDeNumerosSorteados.push(numeroEscolhido);
