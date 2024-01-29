@@ -7,6 +7,8 @@ function exibirTextoNaTela(tag, texto) {
     let campo = document.querySelector(tag);
 
     campo.innerHTML = texto;
+
+    responsiveVoice.speak(texto, "Brazilian Portuguese Female", { rate: 1.2 });
 }
 
 function exibirMensagemInicial() {
@@ -47,7 +49,7 @@ function gerarNumeroAleatorio() {
     if (quantidadeDeElementosNaLista == 3) {
         listaDeNumerosSorteados = [];
     }
-    if (listaDeNumerosSoadicionarteados.includes(numeroEscolhido)) {
+    if (listaDeNumerosSorteados.includes(numeroEscolhido)) {
         return gerarNumeroAleatorio();
     } else {
         listaDeNumerosSorteados.push(numeroEscolhido);
@@ -68,6 +70,3 @@ function reiniciarJogo() {
     tentativas = 1;
     document.getElementById("reiniciar").setAttribute("disabled", true);
 }
-
-exibirTextoNaTela("h1", "Jogo do Número Secreto");
-exibirTextoNaTela("p", "Escolha um número entre 1 e 100:");
